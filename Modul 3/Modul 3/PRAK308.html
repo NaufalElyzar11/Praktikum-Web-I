@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Kursus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: grey;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #D3D3D3;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #ff707a;
+            background-color: #48b4db;
+            padding: 10px;
+            margin: 0;
+            border-radius: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 50px);
+            justify-content: space-between;
+        }
+        label {
+            margin: 10px 0 5px 0;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .comments {
+            background-color: #ff707a;
+            padding: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 10px 0;
+        }
+        .buttons input[type="reset"], .buttons input[type="submit"], .buttons input[type="button"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff707a;
+            color: white;
+            cursor: pointer;
+        }
+        .buttons input[type="reset"]:hover, .buttons input[type="submit"]:hover, .buttons input[type="button"]:hover {
+            background-color: #ff707a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Kursus</h1>
+        <form>
+            <div>
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name">
+
+                <label for="nim">Nim</label>
+                <input type="text" id="nim" name="nim">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+
+                <label for="dob">Tanggal Lahir</label>
+                <input type="date" id="dob" name="dob">
+
+                <label>Jenis Kelamin</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Perempuan</label>
+
+                <label>Pilih Program Kursus</label>
+                <input type="checkbox" id="csharp" name="course" value="C#">
+                <label for="csharp">C#</label>
+                <input type="checkbox" id="java" name="course" value="Java">
+                <label for="java">Java</label>
+                <input type="checkbox" id="sql" name="course" value="SQL">
+                <label for="sql">SQL</label>
+                <input type="checkbox" id="htmlphp" name="course" value="HTML dan PHP">
+                <label for="htmlphp">HTML dan PHP</label>
+
+                <label for="schedule">Pilihan Hari/Jam Kursus</label>
+                <select id="schedule" name="schedule">
+                    <option value="senin-rabu-9-11">Senin - Rabu/09.00 - 11.00</option>
+                    <!-- Add more options as necessary -->
+                </select>
+            </div>
+
+            <div class="comments">
+                <label for="comments">Komentar Anda</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+
+            <div class="buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
